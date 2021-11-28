@@ -1,0 +1,8 @@
+mongoimport --db bookstore --collection comments --type json --file mongo.comments.json --jsonArray
+
+db.books.updateMany({}, {
+    $set: {
+        "comments": ["619ece858558d24cf378e678"]
+       
+    }
+})
